@@ -1,7 +1,7 @@
 //numbers//
 //1- resolver o hayar el valor mayor de dos numeros
 
-/*let valor1 = prompt("Ingresa el primer numero para la comparacion: ");
+let valor1 = prompt("Ingresa el primer numero para la comparacion: ");
 let valor2 = prompt("Ingresa el segundo numero para la comparacion: ");
 
 
@@ -41,7 +41,7 @@ function restar(a, b) {
 }
 
 restar(valor5, valor6)
-alert("el resultado es " - resultado);*/
+alert("el resultado es " - resultado);
 
 
 
@@ -56,22 +56,62 @@ let valorCuadrado = prompt("escribe el valor para calcular la raiz");
 
 alert("la raiz cuadrada es " + Math.sqrt(valorCuadrado));
 
-//string//
-//1- identificar la longitud de la cadena de texto
-//2- invertir la cadena de texto: Welcome
-//3- validar 
+// Ejercicio de strings
 
-//arrays//
-//1- agregar valores al arreglo al principio 
-//2- 
-//3- sumar todos los numeros del array (1, 2, 3)= 6
+// 1. Identificar la longitud de la cadena de texto
+const texto = prompt("Ingresa una cadena de texto diferente:");
+alert(La longitud de la cadena es ${texto.length});
 
-//interadores ** while For//
-//1- muestrame los numeros del interador 
-//2- iterar un array de numeros y devolver el valor *2
-//3- muestrame los indicios del array que vas a iterar
+// 2. Invertir la cadena de texto
+const textoInvertido = texto.split("").reverse().join("");
+alert(El texto invertido es: ${textoInvertido});
 
-//Resueltos//
+// 3. Validar si una cadena de texto contiene una subcadena
+const texto2 = prompt("Ingresa otra cadena de texto diferente:");
+const subcadena = prompt("Ingresa una subcadena diferente que quieras buscar:");
+const contieneSubcadena = texto2.includes(subcadena);
+if (contieneSubcadena) {
+alert(La cadena "${texto2}" contiene la subcadena "${subcadena}");
+} else {
+alert(La cadena "${texto2}" no contiene la subcadena "${subcadena}");
+}
 
+// Ejercicio de arrays
 
+// 1. Agregar valores al arreglo al principio
+const arreglo = [7, 8, 9];
+arreglo.unshift(6);
+arreglo.unshift(5);
+alert(El arreglo resultante es: ${arreglo});
 
+// 2. Ordenar un arreglo de números de menor a mayor
+const arreglo2 = [9, 7, 8, 5, 6];
+arreglo2.sort((a, b) => a - b);
+alert(El arreglo ordenado es: ${arreglo2});
+
+// 3. Sumar todos los números del arreglo
+const arreglo3 = [4, 5, 6];
+const suma = arreglo3.reduce((total, num) => total + num, 0);
+alert(La suma de los números del arreglo es: ${suma});
+
+// Ejercicio de iteradores
+
+// 1. Mostrar los números del iterador
+let numeros = "";
+for (let i = 0; i < 6; i++) {
+numeros += i + ", ";
+}
+alert(Los números del iterador son: ${numeros});
+
+// 2. Iterar un arreglo de números y devolver el valor * 2
+const arreglo4 = [4, 5, 6];
+const arregloDoble = arreglo4.map((num) => num * 3);
+alert(El arreglo original es: ${arreglo4}\nEl arreglo con valores triples es: ${arregloDoble});
+
+// 3. Mostrar los índices del arreglo que vas a iterar
+const arreglo5 = ["d", "e", "f"];
+let indices = "";
+for (let i = 0; i < arreglo5.length; i++) {
+indices += El índice ${i} contiene el valor ${arreglo5[i]}\n;
+}
+alert(Los índices del arreglo son:\n${indices});
